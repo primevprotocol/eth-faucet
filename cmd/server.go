@@ -24,9 +24,9 @@ var (
 	proxyCntFlag = flag.Int("proxycount", 0, "Count of reverse proxies in front of the server")
 	versionFlag  = flag.Bool("version", false, "Print version number")
 
-	payoutFlag   = flag.Int("faucet.amount", os.Getenv("FAUCET_AMOUNT"), "Number of Ethers to transfer per user request")
-	intervalFlag = flag.Int("faucet.minutes", os.Getenv("FAUCET_MINUTES"), "Number of minutes to wait between funding rounds")
-	netnameFlag  = flag.String("faucet.name", os.Getenv("FAUCET_NAME"), "Network name to display on the frontend")
+	payoutFlag   = flag.Int("faucet.amount", 10, "Number of Ethers to transfer per user request")
+	intervalFlag = flag.Int("faucet.minutes", 60, "Number of minutes to wait between funding rounds")
+	netnameFlag  = flag.String("faucet.name", "mev-commit testnet", "Network name to display on the frontend")
 	symbolFlag   = flag.String("faucet.symbol", "ETH", "Token symbol to display on the frontend")
 
 	keyJSONFlag  = flag.String("wallet.keyjson", os.Getenv("KEYSTORE"), "Keystore file to fund user requests with")
